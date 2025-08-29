@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "864914183110",
+    "project_id": "park-s-yareuu-bistro",
+    "storage_bucket": "park-s-yareuu-bistro.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864914183110:android:e18db2814b6ce2f09098c7",
+        "android_client_info": {
+          "package_name": "com.example.park"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtTj6fis-s-BOJymOhnDuODQESzE67nR0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
