@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'widgets/customize_appbar.dart';
-import 'screens/contact_screen.dart';
+import '../widgets/customize_appbar.dart';
+import 'contact_screen.dart';
 
 class PlaceScreen extends StatelessWidget {
   const PlaceScreen({super.key});
@@ -36,7 +36,7 @@ class PlaceScreen extends StatelessWidget {
 
             // ===== Private Dining Room =====
             _PlaceCard(
-              imagePath: "lib/assets/private_droom.jpg",
+              imagePath: "lib/assets/private_dining2.jpg",
               title: "Private Dining Room",
               legends: const [
                 _Legend(icon: Icons.people, text: "20 Seated"),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/customize_appbar.dart';
-import 'package:park/place_screen.dart';
+import 'package:park/screens/place_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -277,8 +277,109 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               ),
 
             const SizedBox(height: 32),
+            if (_selectedTab == 2)
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "Popular Dishes",
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                    ),
+                    const SizedBox(height: 8),
+
+                    // Horizontal scrollable gallery
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          _dishImage("lib/assets/dishes/1.jpg"),
+                          const SizedBox(width: 8),
+                          _dishImage("lib/assets/dishes/2.jpg"),
+                          const SizedBox(width: 8),
+                          _dishImage("lib/assets/dishes/3.jpg"),
+                          const SizedBox(width: 8),
+                          _dishImage("lib/assets/dishes/4.jpg"),
+                          const SizedBox(width: 8),
+                          _dishImage("lib/assets/dishes/5.jpg"),
+                        ],
+                      ),
+                    ),
+
+                    const SizedBox(height: 12),
+
+                    const Text(
+                      "Explore the popular dishes at Parks Yareuu Bistro, known for their vibrant flavors and unique twists on classic Korean dishes. Enjoy your meal!",
+                    ),
+                  ],
+                ),
+              ),
+            if (_selectedTab == 3)
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "Photos",
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                    ),
+                    const SizedBox(height: 8),
+
+                    // Horizontal scrollable gallery for Photos
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          _photoImage("lib/assets/private_dining2.jpg"),
+                          const SizedBox(width: 8),
+                          _photoImage("lib/assets/whole_resto.jpg"),
+                          const SizedBox(width: 8),
+                          const SizedBox(width: 8),
+                          _photoImage("lib/assets/home_screen.jpg"),
+                        ],
+                      ),
+                    ),
+
+                    const SizedBox(height: 20),
+                    const Text(
+                      "Explore the beautiful ambiance and cuisine served at Parks Yareuu Bistro through these stunning photos!",
+                    ),
+                  ],
+                ),
+              ),
           ],
         ),
+      ),
+    );
+  }
+  // Photo image container widget
+  Widget _photoImage(String imagePath) {
+    return Container(
+      width: 150,
+      height: 150,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage(imagePath),  // Update with your photo file path
+          fit: BoxFit.cover,
+        ),
+        borderRadius: BorderRadius.circular(8),
+      ),
+    );
+  }
+
+  // Dish image container widget
+  Widget _dishImage(String imagePath) {
+    return Container(
+      width: 150,
+      height: 150,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage(imagePath),  // Update with your dish image file path
+          fit: BoxFit.cover,
+        ),
+        borderRadius: BorderRadius.circular(8),
       ),
     );
   }

@@ -83,6 +83,12 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - lib/assets/
+    - lib/assets/dishes/1.jpg
+    - lib/assets/dishes/2.jpg
+    - lib/assets/dishes/3.jpg
+    - lib/assets/dishes/4.jpg
+    - lib/assets/dishes/5.jpg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
